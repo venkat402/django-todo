@@ -1,0 +1,24 @@
+<div class="pt-2">
+    {% if update %}
+    <form method="post" action="">
+        {% else %}
+        <form method="post" action="add_task">
+            {% endif %}
+            {% csrf_token %}
+            <div class="form-group">
+                {% if update %}
+                <label for="exampleInputEmail1">Update Task</label>
+                {% else %}
+                <label for="exampleInputEmail1">Task Name</label>
+                {% endif %}
+                <input type="text" class="form-control" name="task_name" id="exampleInputEmail1"
+                       aria-describedby="emailHelp"
+                       placeholder="Enter Task Name..." value="{{task_data.task_name}}">
+            </div>
+            {% if update %}
+            <button type="submit" class="btn btn-primary">Update Task</button>
+            {% else %}
+            <button type="submit" class="btn btn-primary">Add Task</button>
+            {% endif %}
+        </form>
+</div>

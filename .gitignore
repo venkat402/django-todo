@@ -1,0 +1,17 @@
+web_project/.env
+/.coverage/
+/.eggs/
+/.idea/
+/build/
+/dist/
+/docs/build/
+/*.egg-info/
+settings.json
+
+# Django and Python
+*.py[cod]
+.pytest_cache/*
+.mypy_cache
+
+db.sqlite3
+media/profile_pics/*
